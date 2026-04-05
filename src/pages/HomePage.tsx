@@ -56,7 +56,7 @@ export default function HomePage({ onStartProject }: HomePageProps) {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--color-background)] flex flex-col">
+    <div className="min-h-screen bg-[var(--color-background)] flex flex-col" style={{background: 'var(--color-background)'}}>
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-[var(--color-border)]">
         <div className="flex items-center gap-2">
@@ -75,7 +75,8 @@ export default function HomePage({ onStartProject }: HomePageProps) {
       </header>
 
       {/* Hero */}
-      <main className="flex-1 flex flex-col items-center justify-center px-6 py-16 max-w-3xl mx-auto w-full">
+      <main className="flex-1 flex flex-col items-center justify-center px-6 py-16" style={{width: '100%'}}>
+        <div style={{width: '100%', maxWidth: '768px', margin: '0 auto'}}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -181,6 +182,7 @@ export default function HomePage({ onStartProject }: HomePageProps) {
             <span>全程透明可审计</span>
           </div>
         </motion.div>
+        </div>
       </main>
     </div>
   )
